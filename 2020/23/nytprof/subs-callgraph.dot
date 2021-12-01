@@ -1,0 +1,236 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_List_MoreUtils_PP {
+	label="List::MoreUtils::PP";
+	"List::MoreUtils::PP::BEGIN@4";
+	"List::MoreUtils::PP::BEGIN@327";
+	"List::MoreUtils::PP::BEGIN@334";
+	"List::MoreUtils::PP::BEGIN@3";
+	"List::MoreUtils::PP::BEGIN@5";
+}
+subgraph cluster_UNIVERSAL {
+	label="UNIVERSAL";
+	"UNIVERSAL::can";
+}
+subgraph cluster_warnings_register {
+	label="warnings::register";
+	"warnings::register::import";
+}
+subgraph cluster_List_MoreUtils_XS {
+	label="List::MoreUtils::XS";
+	"List::MoreUtils::XS::BEGIN@4";
+	"List::MoreUtils::XS::BEGIN@18";
+	"List::MoreUtils::XS::BEGIN@7";
+	"List::MoreUtils::XS::BEGIN@3";
+	"List::MoreUtils::XS::BEGIN@5";
+}
+subgraph cluster_Exporter_Tiny {
+	label="Exporter::Tiny";
+	"Exporter::Tiny::import";
+	"Exporter::Tiny::BEGIN@346";
+	"Exporter::Tiny::BEGIN@332";
+	"Exporter::Tiny::_exporter_install_sub";
+	"Exporter::Tiny::CORE:qr";
+	"Exporter::Tiny::BEGIN@4";
+	"Exporter::Tiny::CORE:regcomp";
+	"Exporter::Tiny::BEGIN@189";
+	"Exporter::Tiny::CORE:match";
+	"Exporter::Tiny::_exporter_expand_sub";
+	"Exporter::Tiny::BEGIN@3";
+	"Exporter::Tiny::_exporter_validate_opts";
+	"Exporter::Tiny::BEGIN@5.1";
+	"Exporter::Tiny::BEGIN@143";
+	"Exporter::Tiny::BEGIN@206";
+	"Exporter::Tiny::mkopt";
+	"Exporter::Tiny::BEGIN@170";
+	"Exporter::Tiny::BEGIN@5";
+	"Exporter::Tiny::BEGIN@298";
+	"Exporter::Tiny::BEGIN@48";
+	"Exporter::Tiny::_exporter_permitted_regexp";
+	"Exporter::Tiny::__ANON__[Exporter/Tiny.pm:38]";
+	"Exporter::Tiny::CORE:sort";
+}
+subgraph cluster_vars {
+	label="vars";
+	"vars::BEGIN@8";
+	"vars::CORE:match";
+	"vars::BEGIN@7";
+	"vars::BEGIN@3";
+	"vars::import";
+}
+subgraph cluster_List_Util {
+	label="List::Util";
+	"List::Util::BEGIN@31";
+	"List::Util::max";
+	"List::Util::min";
+	"List::Util::import";
+	"List::Util::BEGIN@9";
+	"List::Util::BEGIN@10";
+}
+subgraph cluster_XSLoader {
+	label="XSLoader";
+	"XSLoader::load";
+}
+subgraph cluster_warnings {
+	label="warnings";
+	"warnings::import";
+	"warnings::register_categories";
+	"warnings::unimport";
+	"warnings::_expand_bits";
+	"warnings::_mkMask";
+	"warnings::CORE:match";
+	"warnings::_bits";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::BEGIN@7";
+	"strict::CORE:match";
+	"strict::unimport";
+	"strict::bits";
+	"strict::import";
+}
+subgraph cluster_List_MoreUtils {
+	label="List::MoreUtils";
+	"List::MoreUtils::BEGIN@8";
+	"List::MoreUtils::BEGIN@12";
+	"List::MoreUtils::BEGIN@100";
+	"List::MoreUtils::BEGIN@5";
+	"List::MoreUtils::BEGIN@4";
+	"List::MoreUtils::firstidx";
+	"List::MoreUtils::BEGIN@3";
+	"List::MoreUtils::BEGIN@15";
+	"List::MoreUtils::BEGIN@40";
+	"List::MoreUtils::BEGIN@42";
+}
+subgraph cluster_Exporter {
+	label="Exporter";
+	"Exporter::CORE:match";
+	"Exporter::import";
+	"Exporter::CORE:subst";
+}
+subgraph cluster_main {
+	label="main";
+	"main::CORE:prtf";
+	"main::CORE:print";
+	"main::move";
+	"main::BEGIN@5";
+	"main::RUNTIME";
+	"main::BEGIN@6";
+	"main::BEGIN@4";
+	"main::NULL";
+	"main::BEGIN@3";
+}
+"List::MoreUtils::BEGIN@12" -> "List::MoreUtils::PP::BEGIN@4";
+"Exporter::Tiny::import" -> "Exporter::Tiny::_exporter_expand_sub";
+"main::BEGIN@6" -> "List::MoreUtils::BEGIN@12";
+"List::MoreUtils::BEGIN@8" -> "List::MoreUtils::XS::BEGIN@3";
+"warnings::register_categories" -> "warnings::_mkMask";
+"warnings::import" -> "warnings::_bits";
+"main::BEGIN@4" -> "warnings::CORE:match";
+"List::MoreUtils::BEGIN@8" -> "List::MoreUtils::XS::BEGIN@4";
+"List::MoreUtils::PP::BEGIN@327" -> "vars::BEGIN@8";
+"List::MoreUtils::BEGIN@12" -> "List::MoreUtils::PP::BEGIN@334";
+"List::MoreUtils::BEGIN@15" -> "Exporter::Tiny::BEGIN@189";
+"vars::BEGIN@7" -> "warnings::register::import";
+"main::BEGIN@5" -> "Exporter::import";
+"main::RUNTIME" -> "main::CORE:print";
+"main::move" -> "main::CORE:print";
+"Exporter::Tiny::BEGIN@332" -> "warnings::unimport";
+"Exporter::Tiny::BEGIN@5.1" -> "warnings::unimport";
+"main::BEGIN@6" -> "Exporter::Tiny::import";
+"List::MoreUtils::BEGIN@15" -> "Exporter::Tiny::BEGIN@346";
+"main::BEGIN@5" -> "List::Util::BEGIN@31";
+"List::MoreUtils::BEGIN@15" -> "Exporter::Tiny::BEGIN@332";
+"main::BEGIN@6" -> "List::MoreUtils::BEGIN@40";
+"main::RUNTIME" -> "List::Util::max";
+"main::move" -> "List::Util::max";
+"main::BEGIN@6" -> "List::MoreUtils::BEGIN@100";
+"Exporter::Tiny::import" -> "Exporter::Tiny::_exporter_permitted_regexp";
+"List::MoreUtils::XS::BEGIN@7" -> "vars::import";
+"List::MoreUtils::PP::BEGIN@327" -> "vars::import";
+"List::MoreUtils::BEGIN@15" -> "Exporter::Tiny::BEGIN@298";
+"Exporter::Tiny::import" -> "Exporter::Tiny::mkopt";
+"List::MoreUtils::BEGIN@15" -> "Exporter::Tiny::BEGIN@5";
+"main::BEGIN@5" -> "List::Util::BEGIN@9";
+"main::RUNTIME" -> "List::MoreUtils::firstidx";
+"List::MoreUtils::BEGIN@12" -> "List::MoreUtils::PP::BEGIN@3";
+"main::NULL" -> "main::BEGIN@5";
+"List::MoreUtils::BEGIN@42" -> "strict::import";
+"vars::BEGIN@8" -> "strict::import";
+"main::BEGIN@3" -> "strict::import";
+"List::Util::BEGIN@9" -> "strict::import";
+"Exporter::Tiny::BEGIN@4" -> "strict::import";
+"List::MoreUtils::XS::BEGIN@4" -> "strict::import";
+"List::MoreUtils::BEGIN@4" -> "strict::import";
+"List::MoreUtils::PP::BEGIN@4" -> "strict::import";
+"List::MoreUtils::BEGIN@15" -> "Exporter::Tiny::BEGIN@5.1";
+"Exporter::Tiny::import" -> "Exporter::Tiny::_exporter_validate_opts";
+"main::NULL" -> "main::BEGIN@6";
+"Exporter::Tiny::BEGIN@170" -> "strict::unimport";
+"Exporter::Tiny::BEGIN@206" -> "strict::unimport";
+"Exporter::Tiny::BEGIN@298" -> "strict::unimport";
+"List::MoreUtils::BEGIN@40" -> "strict::unimport";
+"Exporter::Tiny::BEGIN@189" -> "strict::unimport";
+"List::MoreUtils::PP::BEGIN@334" -> "strict::unimport";
+"List::Util::BEGIN@31" -> "strict::unimport";
+"Exporter::Tiny::BEGIN@346" -> "strict::unimport";
+"Exporter::Tiny::BEGIN@48" -> "strict::unimport";
+"List::MoreUtils::BEGIN@100" -> "strict::unimport";
+"Exporter::Tiny::BEGIN@143" -> "strict::unimport";
+"main::BEGIN@5" -> "XSLoader::load";
+"List::MoreUtils::BEGIN@8" -> "XSLoader::load";
+"List::MoreUtils::PP::BEGIN@327" -> "vars::BEGIN@3";
+"vars::import" -> "vars::CORE:match";
+"main::BEGIN@5" -> "List::Util::BEGIN@10";
+"Exporter::Tiny::_exporter_install_sub" -> "Exporter::Tiny::CORE:match";
+"Exporter::Tiny::_exporter_expand_sub" -> "Exporter::Tiny::CORE:match";
+"Exporter::Tiny::__ANON__[Exporter/Tiny.pm:38]" -> "Exporter::Tiny::CORE:match";
+"strict::unimport" -> "strict::bits";
+"strict::import" -> "strict::bits";
+"List::MoreUtils::BEGIN@12" -> "List::MoreUtils::PP::BEGIN@5";
+"main::BEGIN@6" -> "List::MoreUtils::BEGIN@4";
+"List::MoreUtils::BEGIN@15" -> "Exporter::Tiny::BEGIN@3";
+"warnings::_bits" -> "warnings::_expand_bits";
+"warnings::unimport" -> "warnings::_expand_bits";
+"Exporter::Tiny::_exporter_permitted_regexp" -> "Exporter::Tiny::CORE:regcomp";
+"Exporter::Tiny::_exporter_expand_sub" -> "Exporter::Tiny::CORE:regcomp";
+"Exporter::import" -> "Exporter::CORE:match";
+"main::NULL" -> "main::BEGIN@3";
+"warnings::register::import" -> "warnings::register_categories";
+"List::MoreUtils::BEGIN@15" -> "Exporter::Tiny::BEGIN@4";
+"main::BEGIN@6" -> "List::MoreUtils::BEGIN@15";
+"Exporter::Tiny::_exporter_permitted_regexp" -> "Exporter::Tiny::CORE:qr";
+"List::MoreUtils::PP::BEGIN@327" -> "vars::BEGIN@7";
+"Exporter::Tiny::import" -> "Exporter::Tiny::_exporter_install_sub";
+"main::move" -> "List::Util::min";
+"Exporter::Tiny::BEGIN@5" -> "warnings::import";
+"main::BEGIN@4" -> "warnings::import";
+"List::MoreUtils::XS::BEGIN@5" -> "warnings::import";
+"List::Util::BEGIN@10" -> "warnings::import";
+"List::MoreUtils::BEGIN@5" -> "warnings::import";
+"List::MoreUtils::PP::BEGIN@5" -> "warnings::import";
+"main::BEGIN@6" -> "List::MoreUtils::BEGIN@8";
+"List::MoreUtils::BEGIN@8" -> "List::MoreUtils::XS::BEGIN@5";
+"main::BEGIN@5" -> "List::Util::import";
+"main::BEGIN@6" -> "List::MoreUtils::BEGIN@5";
+"List::MoreUtils::BEGIN@15" -> "Exporter::Tiny::BEGIN@48";
+"main::RUNTIME" -> "main::CORE:prtf";
+"main::move" -> "main::CORE:prtf";
+"Exporter::Tiny::_exporter_permitted_regexp" -> "Exporter::Tiny::CORE:sort";
+"Exporter::Tiny::import" -> "Exporter::Tiny::__ANON__[Exporter/Tiny.pm:38]";
+"List::MoreUtils::BEGIN@15" -> "Exporter::Tiny::BEGIN@206";
+"Exporter::Tiny::_exporter_expand_sub" -> "UNIVERSAL::can";
+"main::BEGIN@6" -> "UNIVERSAL::can";
+"List::MoreUtils::BEGIN@15" -> "Exporter::Tiny::BEGIN@170";
+"main::BEGIN@6" -> "List::MoreUtils::BEGIN@3";
+"strict::BEGIN@7" -> "strict::CORE:match";
+"List::MoreUtils::BEGIN@12" -> "List::MoreUtils::PP::BEGIN@327";
+"main::BEGIN@3" -> "strict::BEGIN@7";
+"List::MoreUtils::BEGIN@15" -> "Exporter::Tiny::BEGIN@143";
+"List::MoreUtils::BEGIN@8" -> "List::MoreUtils::XS::BEGIN@7";
+"Exporter::import" -> "Exporter::CORE:subst";
+"main::RUNTIME" -> "main::move";
+"List::MoreUtils::BEGIN@8" -> "List::MoreUtils::XS::BEGIN@18";
+"main::NULL" -> "main::BEGIN@4";
+"main::BEGIN@6" -> "List::MoreUtils::BEGIN@42";
+}

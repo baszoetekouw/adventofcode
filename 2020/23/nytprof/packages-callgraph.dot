@@ -1,0 +1,38 @@
+digraph {
+graph [overlap=false]
+node [shape=doublecircle];
+"List::MoreUtils" -> "XSLoader";
+"List::MoreUtils" -> "Exporter::Tiny";
+"List::MoreUtils::XS" -> "warnings";
+"main" -> "XSLoader";
+"main" -> "warnings";
+"warnings" -> "warnings";
+"List::MoreUtils::PP" -> "vars";
+"vars" -> "warnings::register";
+"List::Util" -> "warnings";
+"List::MoreUtils::PP" -> "strict";
+"main" -> "main";
+"List::MoreUtils" -> "strict";
+"main" -> "List::Util";
+"main" -> "strict";
+"main" -> "UNIVERSAL";
+"List::MoreUtils::XS" -> "strict";
+"main" -> "Exporter";
+"strict" -> "strict";
+"List::MoreUtils::PP" -> "warnings";
+"Exporter::Tiny" -> "Exporter::Tiny";
+"Exporter" -> "Exporter";
+"List::MoreUtils::XS" -> "vars";
+"main" -> "List::MoreUtils";
+"List::MoreUtils" -> "List::MoreUtils::XS";
+"List::Util" -> "strict";
+"List::MoreUtils" -> "List::MoreUtils::PP";
+"List::MoreUtils" -> "warnings";
+"warnings::register" -> "warnings";
+"Exporter::Tiny" -> "strict";
+"Exporter::Tiny" -> "warnings";
+"main" -> "Exporter::Tiny";
+"Exporter::Tiny" -> "UNIVERSAL";
+"vars" -> "vars";
+"vars" -> "strict";
+}

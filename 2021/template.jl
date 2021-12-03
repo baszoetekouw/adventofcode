@@ -1,12 +1,12 @@
 using DelimitedFiles
 
-function read_ints(filename::String)::Array{Int}
+function read_ints(filename::String)::Array{Any}
 	f = open(filename)
-	data = readdlm(f, Int)
+	data = readdlm(f, Any)
 	return data
 end
 
-function do_calc(data::Array{Int})
+function do_calc(data::Array{Any})
 	result = data
 	return result
 end

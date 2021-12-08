@@ -1,6 +1,6 @@
 using DelimitedFiles
 
-function read_ints(filename::String)::Array{Any}
+function read_file(filename::String)::Array{Any}
 	f = open(filename)
 	data = readdlm(f, Any)
 	return data
@@ -13,7 +13,7 @@ end
 
 function main()
 	filename = ARGS[1]
-	data = read_ints(filename)
+	data = read_file(filename)
 	result = do_calc(data)
 	println("result: ", result)
 end

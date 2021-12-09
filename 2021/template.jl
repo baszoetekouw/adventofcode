@@ -1,4 +1,5 @@
 using DelimitedFiles
+using Printf
 
 function display(x)
 	Base.Multimedia.display(x)
@@ -11,8 +12,26 @@ function Base.show(io::IO, mime::MIME"text/plain", v::Vector{T}) where {T}
 
 end
 
+function Base.convert(::Type{CartesianIndex}, v::Vector{Int64})
+	CartesianIndex(v...)
+end
 
-
+function matrixprint(m::Matrix)
+	if length(m)>10000
+		@printf("Matrix %dx%d too large to display\n", size(m)...)
+		return
+	end
+	for y in 1:size(m,1)
+		for x in 1:size(m,2)
+			if m[y,x]==0
+				print(".")
+			else
+				print(m[y,x])
+			end
+		end
+		print("\n")
+	end
+end
 
 function read_file_simple(filename::String)::Array{Any}
 	f = open(filename)
